@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form with Basic Validation</h2>
+      <form id="myForm" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <div id="nameError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <div id="emailError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            required
+          />
+          <div id="phoneError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="6"
+            required
+          />
+          <div id="passwordError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="1" max="120" required />
+          <div id="ageError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <div id="genderError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+          <div id="dobError" class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="color">Favorite Color:</label>
+          <input type="color" id="color" name="color" required />
+          <div id="colorError" class="error-message"></div>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var password = document.getElementById("password").value;
+        var age = document.getElementById("age").value;
+        var gender = document.getElementById("gender").value;
+        var dob = document.getElementById("dob").value;
+        var color = document.getElementById("color").value;
+
+        console.log(name,email,phone,password)
+
+        var isValid = true;
+
+        // Name validation
+        if (name === "") {
+          document.getElementById("nameError").innerHTML = "Name is required";
+          isValid = false;
+        } else {
+          document.getElementById("nameError").innerHTML = "";
+        }
+
+        // Email validation
+        if (email === "") {
+          document.getElementById("emailError").innerHTML = "Email is required";
+          isValid = false;
+        } else {
+          document.getElementById("emailError").innerHTML = "";
+        }
+
+        // Phone validation
+        if (phone === "") {
+          document.getElementById("phoneError").innerHTML =
+            "Phone number is required";
+          isValid = false;
+        } else {
+          document.getElementById("phoneError").innerHTML = "";
+        }
+
+        // Password validation
+        if (password === "") {
+          document.getElementById("passwordError").innerHTML =
+            "Password is required";
+          isValid = false;
+        } else {
+          document.getElementById("passwordError").innerHTML = "";
+        }
+
+        // Age validation
+        if (age === "") {
+          document.getElementById("ageError").innerHTML = "Age is required";
+          isValid = false;
+        } else {
+          document.getElementById("ageError").innerHTML = "";
+        }
+
+        // Gender validation
+        if (gender === "") {
+          document.getElementById("genderError").innerHTML =
+            "Gender is required";
+          isValid = false;
+        } else {
+          document.getElementById("genderError").innerHTML = "";
+        }
+
+        // Date of Birth validation
+        if (dob === "") {
+          document.getElementById("dobError").innerHTML =
+            "Date of Birth is required";
+          isValid = false;
+        } else {
+          document.getElementById("dobError").innerHTML = "";
+        }
+
+        // Color validation
+        if (color === "") {
+          document.getElementById("colorError").innerHTML =
+            "Favorite color is required";
+          isValid = false;
+        } else {
+          document.getElementById("colorError").innerHTML = "";
+        }
+
+        return isValid;
+      }
+    </script>
+  </body>
+</html>

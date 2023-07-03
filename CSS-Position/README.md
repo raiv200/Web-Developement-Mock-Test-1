@@ -1,6 +1,8 @@
 ## Web development Mock Test-1
 
-### CSS Position
+### CSS Positions
+
+![CSS Positions](./css-position.png)
 
 **There are 5 types of CSS Position :**
 
@@ -43,6 +45,6 @@ When an element is give a position value fixed, then the element is positioned r
 position: sticky;
 ```
 
-The elements are positioned  based on the user's scoll position.
+The elements are positioned  based on the user's scroll position.
 
 
