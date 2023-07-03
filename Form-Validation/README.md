@@ -1,6 +1,6 @@
 ## Web development Mock Test-1
 
-### Form Valiodation 
+### Form Validation 
 
 ![Form Validation](./form-validation.png)
 
