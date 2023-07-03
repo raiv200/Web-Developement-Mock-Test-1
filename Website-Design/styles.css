@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    font-weight: bold;
+    
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .logo img {
+    width:50px;
+    margin-left: 380px;
+  }
+  
+  .user-controls {
+    display: flex;
+    align-items: center;
+    padding:4px 10px;
+    margin-left: auto;
+  }
+  .number {
+    display: flex ;
+    flex-direction: column;
+    padding: 2px;
+    text-align: left;
+    margin-right: 20px;
+  }
+  .number > span {
+    font-weight: bold;
+    text-align: right;
+  }
+  .icon {
+    margin-right: 16px;
+    color: #111111;
+    font-weight: bold;
+    height:24px;
+  }
+  
+  .btn {
+    background-color: #fbff26;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .login{
+    background-color: #ffffff;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 10px;
+    padding: 10px;
+    max-width: 100%;
+    height: 600px;
+  }
+ 
+  
+  .hero-left {
+    flex: 1;
+    max-width: 460px;
+    padding: 30px 60px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .hero-left > h1 {
+    font-size: 46px;
+  }
+  
+  .small {
+    font-size: 16px;
+    color: #999;
+  }
+  
+  .hero-left > h1 {
+    font-size: 48px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+    line-height:1.6em;
+  }
+
+  .hero-right {
+    width:750px;
+    height:650px;
+    padding-top: 50px;
+  }
+  
+  .hero-right img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
